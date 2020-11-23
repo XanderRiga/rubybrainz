@@ -2,7 +2,7 @@
 
 require 'rubybrainz/version'
 
+# This is the base module to use all of the rubybrainz module.
 module Rubybrainz
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Search, 'rubybrainz/search'
 end
