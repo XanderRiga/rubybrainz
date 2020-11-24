@@ -4,4 +4,10 @@ language: ruby
 cache: bundler
 rvm:
   - 2.6.3
-before_install: gem install bundler -v 2.0.2
+before_install:
+  - gem install bundler -v 2.0.2
+  - git clone https://github.com/TravisToolbox/rubocop-travis.git
+install:
+  - ./rubocop-travis/install.sh
+script:
+  - ./rubocop-travis/scan.sh
