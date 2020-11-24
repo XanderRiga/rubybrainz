@@ -14,7 +14,9 @@ RSpec.describe Rubybrainz::Http do
       let(:query) { 'artist:Madeon AND country:FR AND type:Person' }
 
       it 'returns a rubybrainz response' do
-        expect(subject).to be_a(Rubybrainz::Entities::Response)
+        VCR.use_cassette('madon_artist_search') do
+          expect(subject).to be_a(Rubybrainz::Entities::Response)
+        end
       end
     end
   end
