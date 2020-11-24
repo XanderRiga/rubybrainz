@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'dry-struct'
 gem 'dry-types'
 gem 'httparty'
+gem 'rake'
 gem 'rubocop'
 gem 'ruby-enum'
 
