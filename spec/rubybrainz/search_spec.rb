@@ -2,12 +2,13 @@
 
 require 'rubybrainz/search'
 require 'rubybrainz/entities/request/artist_parameter'
+require 'rubybrainz/entities/response'
 
 RSpec.describe Rubybrainz::Search do
-  described_class = Rubybrainz::Search.new
+  search = described_class.new
 
   describe '#artist' do
-    subject { described_class.artist(artist_parameter: artist_parameter) }
+    subject { search.artist(artist_parameter: artist_parameter) }
 
     let(:artist_parameter) do
       Rubybrainz::Entities::Request::ArtistParameter.new(
@@ -17,8 +18,8 @@ RSpec.describe Rubybrainz::Search do
       )
     end
 
-    it 'returns a httparty response with' do
-      expect(subject).to be_a(HTTParty::Response)
+    it 'returns a rubybrainz response' do
+      expect(subject).to be_a(Rubybrainz::Entities::Response)
     end
   end
 end
