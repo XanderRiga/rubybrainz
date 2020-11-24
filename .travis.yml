@@ -1,4 +1,5 @@
 ---
+env: SKIP_INTERPRETER=true
 sudo: false
 language: ruby
 cache: bundler
