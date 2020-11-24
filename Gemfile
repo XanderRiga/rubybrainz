@@ -11,6 +11,7 @@ gem 'ruby-enum'
 group :development do
   gem 'pry'
   gem 'vcr'
+  gem 'webmock'
 end
 
 # Specify your gem's dependencies in rubybrainz.gemspec

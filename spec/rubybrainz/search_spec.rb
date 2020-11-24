@@ -19,7 +19,9 @@ RSpec.describe Rubybrainz::Search do
     end
 
     it 'returns a rubybrainz response' do
-      expect(subject).to be_a(Rubybrainz::Entities::Response)
+      VCR.use_cassette('madeon_artist_search') do
+        expect(subject).to be_a(Rubybrainz::Entities::Response)
+      end
     end
   end
 end

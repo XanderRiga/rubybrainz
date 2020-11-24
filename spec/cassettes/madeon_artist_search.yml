@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://musicbrainz.org/ws/2/artist/?limit=25&query=artist:Madeon%20AND%20country:FR%20AND%20type:Person
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rubybrainz (xanderriga@live.com)
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Nov 2020 20:28:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=15
+      X-Ratelimit-Limit:
+      - '1200'
+      X-Ratelimit-Remaining:
+      - '558'
+      X-Ratelimit-Reset:
+      - '1606249704'
+      Last-Modified:
+      - Tue, 24 Nov 2020 20:27:51 GMT
+      Etag:
+      - '"NTMxYTU0MDAwMDAwMDAwMFNvbHI="'
+      Vary:
+      - Accept-Encoding
+      X-Cache-Status:
+      - MISS
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"created":"2020-11-24T20:28:24.345Z","count":1,"offset":0,"artists":[{"id":"fa1de503-aba7-41fa-a1ed-371b3e87a717","type":"Person","type-id":"b6e035f4-3ce9-331c-97df-83397230b0df","score":100,"name":"Madeon","sort-name":"Madeon","gender":"male","country":"FR","area":{"id":"08310658-51eb-3801-80de-5a0739207115","type":"Country","type-id":"06dd0ae4-8c74-30bb-b43d-95dcedf961de","name":"France","sort-name":"France","life-span":{"ended":null}},"begin-area":{"id":"eedd8c4c-2d89-4cc1-bc3f-07b316c0ea59","type":"City","type-id":"6fd8f29a-3d0a-32fc-980d-ea697b69da78","name":"Nantes","sort-name":"Nantes","life-span":{"ended":null}},"isnis":["0000000407597487"],"life-span":{"begin":"1994-05-30","ended":null},"tags":[{"count":1,"name":"nu-disco"},{"count":4,"name":"electropop"},{"count":4,"name":"electronic"},{"count":2,"name":"house"}]}]}'
+  recorded_at: Tue, 24 Nov 2020 20:28:24 GMT
+recorded_with: VCR 6.0.0
