@@ -86,6 +86,7 @@ GEM
       i18n
     ruby-progressbar (1.10.1)
     unicode-display_width (1.7.0)
+    vcr (6.0.0)
 
 PLATFORMS
   ruby
@@ -101,6 +102,7 @@ DEPENDENCIES
   rubocop
   ruby-enum
   rubybrainz!
+  vcr
 
 BUNDLED WITH
    2.0.2
