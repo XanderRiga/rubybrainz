@@ -2,6 +2,7 @@
 env: SKIP_INTERPRETER=true
 sudo: false
 language: ruby
+cache: bundler
 rvm:
   - 2.6.3
 before_install:
@@ -11,4 +12,3 @@ install:
   - ./rubocop-travis/install.sh
 script:
   - ./rubocop-travis/scan.sh
-  - bundle exec rake spec
