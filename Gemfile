@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'dry-struct'
 gem 'dry-types'
-gem 'faraday'
+gem 'httparty'
 gem 'rubocop'
 gem 'ruby-enum'
 

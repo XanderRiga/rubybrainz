@@ -17,8 +17,8 @@ RSpec.describe Rubybrainz::Search do
       )
     end
 
-    it 'returns a faraday response with' do
-      expect(subject).to be_a(Faraday::Response)
+    it 'returns a httparty response with' do
+      expect(subject).to be_a(HTTParty::Response)
     end
   end
 end

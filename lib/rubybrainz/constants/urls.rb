@@ -5,7 +5,7 @@ module Rubybrainz
   module Constants
     module Urls
       ROOT_URL = 'https://musicbrainz.org/ws/2/'
-      ARTIST_URL = ROOT_URL = 'artist/'
+      ARTIST_URL = ROOT_URL + 'artist/'
     end
   end
 end
