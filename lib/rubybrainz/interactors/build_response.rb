@@ -4,6 +4,7 @@ require 'rubybrainz/entities/response'
 
 module Rubybrainz
   module Interactors
+    # This is how we will build a reasonable Rubybrainz response for each request
     class BuildResponse
       def call(httparty_response:)
         if httparty_response.code == 200

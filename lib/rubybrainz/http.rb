@@ -13,10 +13,7 @@ module Rubybrainz
           'Accept' => 'application/json',
           'User-Agent' => 'rubybrainz (xanderriga@live.com)'
         },
-        query: {
-          query: query,
-          limit: limit
-        }
+        query: { query: query, limit: limit }
       )
 
       response_builder.call(httparty_response: response)
