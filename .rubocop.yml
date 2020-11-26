@@ -3,3 +3,6 @@ Metrics/MethodLength:
 
 AllCops:
   NewCops: enable
+
+Metrics/LineLength:
+  Max: 100
