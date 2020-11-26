@@ -18,6 +18,23 @@ Or install it yourself as:
 
     $ gem install rubybrainz
 
+## Usage
+### Searching for an artist
+Create an `ArtistParameter` object:
+
+```
+artist_parameter = Rubybrainz::Entities::Request::ArtistParameter.new(artist: 'madeon')
+```
+
+Call `Search.artist`
+
+```
+response = Rubybrainz::Search.new.artist(artist_parameter: artist_parameter)
+```
+
+Response will be an instance of `Rubybrainz::Entities::Response`. Since this was an artist query, 
+we can 0 or more artists in the `.artists` field on the response.
+
 
 ## Development
 
