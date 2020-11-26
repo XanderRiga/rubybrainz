@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rubybrainz/entities/response'
+require 'rubybrainz/transforms/json_to_artist'
 
 module Rubybrainz
   module Interactors
@@ -12,19 +13,26 @@ module Rubybrainz
           Rubybrainz::Entities::Response.new(
             success: true,
             message: httparty_response.message,
-            created: body[:created],
-            count: body[:count],
-            offset: body[:offset]
+            created: body['created'],
+            count: body['count'],
+            offset: body['offset'],
+            artists: body['artists'].map { |artist| json_to_artist.call(json_artist: artist) }
           )
         else
           Rubybrainz::Entities::Response.new(
             success: false,
             message: httparty_response.message,
-            created: body[:created],
-            count: body[:count],
-            offset: body[:offset]
+            created: body['created'],
+            count: body['count'],
+            offset: body['offset']
           )
         end
+      end
+
+      private
+
+      def json_to_artist
+        @json_to_artist ||= Rubybrainz::Transforms::JsonToArtist.new
       end
     end
   end

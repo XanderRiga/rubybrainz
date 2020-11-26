@@ -10,7 +10,7 @@ module Rubybrainz
     class Response < Base
       attribute :success, Types::Bool
       attribute :message, Types::String
-      attribute :created, Types::JSON::DateTime.optional.default(nil)
+      attribute :created, Types::String.optional.default(nil)
       attribute :count, Types::Integer.optional.default(nil)
       attribute :offset, Types::Integer.optional.default(nil)
       attribute :works, Types::Array.of(Rubybrainz::Entities::Work).optional.default(nil)
