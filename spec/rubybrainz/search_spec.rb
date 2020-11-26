@@ -25,6 +25,17 @@ RSpec.describe Rubybrainz::Search do
         expect(subject.created).to eq('2020-11-24T20:28:24.345Z')
         expect(subject.count).to eq(1)
         expect(subject.offset).to eq(0)
+        expect(subject.works).to eq(nil)
+
+        artist = subject.artists.first
+
+        expect(artist.id).to eq('fa1de503-aba7-41fa-a1ed-371b3e87a717')
+        expect(artist.name).to eq('Madeon')
+        expect(artist.sort_name).to eq('Madeon')
+        expect(artist.type).to eq('Person')
+        expect(artist.type_id).to eq('b6e035f4-3ce9-331c-97df-83397230b0df')
+        expect(artist.gender).to eq('male')
+        expect(artist.country).to eq('FR')
       end
     end
   end
