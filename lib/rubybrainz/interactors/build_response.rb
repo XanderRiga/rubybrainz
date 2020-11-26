@@ -8,17 +8,21 @@ module Rubybrainz
     class BuildResponse
       def call(httparty_response:)
         if httparty_response.code == 200
+          body = JSON.parse(httparty_response.body)
           Rubybrainz::Entities::Response.new(
             success: true,
-            code: httparty_response.code,
-            body: JSON.parse(httparty_response.body),
-            message: httparty_response.message
+            message: httparty_response.message,
+            created: body[:created],
+            count: body[:count],
+            offset: body[:offset]
           )
         else
           Rubybrainz::Entities::Response.new(
             success: false,
-            code: httparty_response.code,
-            message: httparty_response.message
+            message: httparty_response.message,
+            created: body[:created],
+            count: body[:count],
+            offset: body[:offset]
           )
         end
       end
