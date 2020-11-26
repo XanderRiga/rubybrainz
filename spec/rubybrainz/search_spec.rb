@@ -36,6 +36,22 @@ RSpec.describe Rubybrainz::Search do
         expect(artist.type_id).to eq('b6e035f4-3ce9-331c-97df-83397230b0df')
         expect(artist.gender).to eq('male')
         expect(artist.country).to eq('FR')
+
+        area = artist.area
+
+        expect(area.id).to eq('08310658-51eb-3801-80de-5a0739207115')
+        expect(area.type).to eq('Country')
+        expect(area.type_id).to eq('06dd0ae4-8c74-30bb-b43d-95dcedf961de')
+        expect(area.name).to eq('France')
+        expect(area.sort_name).to eq('France')
+
+        begin_area = artist.begin_area
+
+        expect(begin_area.id).to eq('eedd8c4c-2d89-4cc1-bc3f-07b316c0ea59')
+        expect(begin_area.type).to eq('City')
+        expect(begin_area.type_id).to eq('6fd8f29a-3d0a-32fc-980d-ea697b69da78')
+        expect(begin_area.name).to eq('Nantes')
+        expect(begin_area.sort_name).to eq('Nantes')
       end
     end
   end
