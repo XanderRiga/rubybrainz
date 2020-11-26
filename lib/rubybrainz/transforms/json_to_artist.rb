@@ -5,6 +5,7 @@ require 'rubybrainz/transforms/json_to_area'
 
 module Rubybrainz
   module Transforms
+    # Convert response json to an artist
     class JsonToArtist
       def call(json_artist:)
         Rubybrainz::Entities::Artist.new(

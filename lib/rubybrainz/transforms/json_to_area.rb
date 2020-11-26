@@ -4,6 +4,7 @@ require 'rubybrainz/entities/area'
 
 module Rubybrainz
   module Transforms
+    # Convert response json to an area
     class JsonToArea
       def call(json_area:)
         Rubybrainz::Entities::Area.new(
