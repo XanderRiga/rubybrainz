@@ -2,6 +2,8 @@
 
 This is a wrapper for the [MusicBrainz API](https://musicbrainz.org/doc/MusicBrainz_API)
 
+[![Build Status](https://travis-ci.com/XanderRiga/rubybrainz.svg?branch=master)](https://travis-ci.com/XanderRiga/rubybrainz)
+
 ## Installation
 
 Add this line to your application's Gemfile:
