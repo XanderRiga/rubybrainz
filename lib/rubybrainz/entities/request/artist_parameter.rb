@@ -6,6 +6,7 @@ module Rubybrainz
   module Entities
     module Request
       # This defines a request to search for an artist
+      # Details for what these fields are can be found here: https://musicbrainz.org/doc/Search_Server
       class ArtistParameter < Base
         attribute :alias, Types::String.optional.default(nil)
         attribute :area, Types::String.optional.default(nil)
